@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>For Aanya 🌸</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: linear-gradient(180deg, #fff0f5 0%, #fce8f0 40%, #f5e6f8 75%, #ede8f8 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 18px 60px;
+  }
+
+  .petals-wrap {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .petal {
+    position: absolute;
+    top: -40px;
+    animation: fall linear infinite;
+    opacity: 0.35;
+  }
+
+  @keyframes fall {
+    0%   { transform: translateY(-40px) rotate(0deg); opacity: 0.4; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 32px;
+    padding: 40px 26px 50px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 40px rgba(200, 120, 160, 0.10);
+    border: 1px solid rgba(255, 220, 235, 0.8);
+    animation: fadeUp 1.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .flower {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 8px;
+    animation: sway 5s ease-in-out infinite;
+    display: block;
+  }
+
+  @keyframes sway {
+    0%,100% { transform: rotate(-4deg); }
+    50%      { transform: rotate(4deg); }
+  }
+
+  .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #c2185b;
+    text-align: center;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #f48fb1, transparent);
+    margin: 0 auto 26px;
+    border-radius: 2px;
+  }
+
+  .message p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 2.1;
+    color: #5a3050;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: softFade 2s ease forwards;
+  }
+
+  .message p:nth-child(1)  { animation-delay: 1.2s; }
+  .message p:nth-child(2)  { animation-delay: 4s; }
+  .message p:nth-child(3)  { animation-delay: 7s; }
+  .message p:nth-child(4)  { animation-delay: 10.5s; }
+  .message p:nth-child(5)  { animation-delay: 14s; }
+  .message p:nth-child(6)  { animation-delay: 17.5s; }
+  .message p:nth-child(7)  { animation-delay: 21s; }
+  .message p:nth-child(8)  { animation-delay: 24s; }
+  .message p:nth-child(9)  { animation-delay: 27s; }
+
+  @keyframes softFade {
+    0%   { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .heart-wrap {
+    text-align: center;
+    margin: 24px 0 12px;
+    font-size: 24px;
+    animation: heartbeat 2s ease-in-out infinite;
+    display: block;
+    opacity: 0;
+    animation: heartAppear 2s ease 30s forwards, heartbeat 2s ease-in-out 32s infinite;
+  }
+
+  @keyframes heartAppear {
+    to { opacity: 1; }
+  }
+
+  @keyframes heartbeat {
+    0%,100% { transform: scale(1); }
+    50%      { transform: scale(1.2); }
+  }
+
+  .bye {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #c2185b;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: softFade 2s ease 31.5s forwards;
+  }
+
+  .bye-small {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: #c2185b;
+    text-align: center;
+    margin-top: 12px;
+    opacity: 0;
+    animation: softFade 2s ease 33.5s forwards;
+  }
+</style>
+</head>
+<body>
+
+<div class="petals-wrap" id="petals"></div>
+
+<div class="card">
+  <span class="flower">🌸</span>
+  <div class="name">Hey Aanya</div>
+  <div class="divider"></div>
+
+  <div class="message">
+    <p>I hope you're doing really well. I just need 5 minutes of your time — that's all. 🙏</p>
+    <p>This is probably my last message to you. After this, I promise I won't bother you again. 💙</p>
+    <p>But before I go — I'm sorry. Sorry for everything that ever made you uncomfortable, for every mistake I made. You never deserved any of that. 🤍</p>
+    <p>I just want you to know — I think about you a lot. Whenever I'm upset or angry, I just imagine your smile and somehow everything feels a little better. I don't even know why, but it just does. 😊</p>
+    <p>And thank you, Aanya. Thank you for every little moment, every conversation, every memory. You gave me something I'll carry for a long time. 🌸</p>
+    <p>I tried. I really did. But I can't be just your friend — I wish I could, but I just can't. It hurts too much. So this is me choosing to let go, not because I want to, but because it's the right thing. 💙</p>
+    <p>I really wish and pray that you get into your dream college or university — you deserve nothing less than the best. 🎓✨</p>
+    <p>Bolna aur bahut kuch tha... par aadhi ke liye itna hi kaafi hai. 🥺</p>
+    <p>And one last thing...</p>
+  </div>
+
+  <span class="heart-wrap">❤️</span>
+  <p class="bye">I'll always miss you. Always.</p>
+  <p class="bye-small">Take care of yourself, Aanya. Bye. 🌸</p>
+</div>
+
+<script>
+  const emojis = ['🌸','🌷','🍃','💮','🌺','🌼'];
+  const wrap = document.getElementById('petals');
+  for (let i = 0; i < 16; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    p.style.left = (Math.random() * 100) + 'vw';
+    p.style.fontSize = (10 + Math.random() * 10) + 'px';
+    p.style.animationDuration = (9 + Math.random() * 12) + 's';
+    p.style.animationDelay = (Math.random() * 10) + 's';
+    wrap.appendChild(p);
+  }
+</script>
+</body>
+</html>
